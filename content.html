@@ -212,6 +212,13 @@
         }
       }
     });
+    // 터치로 시작
+    document.addEventListener('touchstart', function(e) {
+      const playBtn = document.querySelector('#ejs-start-game');
+      if (playBtn && playBtn.style.display !== 'none') {
+        playBtn.click();
+      }
+    }, { once: true }); // 터치 이벤트는 한 번만 작동하게
   </script>
 </body>
 
